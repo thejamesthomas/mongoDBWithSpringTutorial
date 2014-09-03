@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
+import static com.google.common.collect.Lists.newArrayList;
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 @Controller
@@ -48,5 +50,10 @@ public class PersonController {
     @RequestMapping(method = PUT, value = "/person/", produces = "application/json")
     public void update(@RequestBody Map data) {
         repository.update(data);
+    }
+
+    @RequestMapping(method = GET, value = "/person/", produces = "application/json")
+    public List<Person> search(HttpServletRequest request) {
+        return newArrayList();
     }
 }
