@@ -2,6 +2,7 @@ package app;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Maps;
+import lombok.EqualsAndHashCode;
 
 import java.util.Collection;
 import java.util.Map;
@@ -10,6 +11,7 @@ import java.util.Set;
 import static com.google.common.collect.Maps.newHashMap;
 import static com.google.common.collect.Sets.newHashSet;
 
+@EqualsAndHashCode
 public class Person implements Map {
 
     public static final String ID = "_id";
@@ -20,7 +22,7 @@ public class Person implements Map {
     public static final String DOMINANT_HAND = "dominantHand";
 
     public Set keys = newHashSet(ID, FIRST_NAME, LAST_NAME, EYE_COLOR, WEARS_GLASSES, DOMINANT_HAND);
-    private Map data = newHashMap();
+    public Map data = newHashMap();
 
     public Person(String id, String firstName, String lastName) {
         data.put(ID, id);
