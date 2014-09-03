@@ -1,3 +1,9 @@
+package app;
+
+import app.Person;
+import app.PersonBuilder;
+import app.PersonController;
+import app.PersonRepository;
 import org.junit.Before;
 import org.junit.Test;
 
