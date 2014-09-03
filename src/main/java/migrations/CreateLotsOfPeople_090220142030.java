@@ -1,6 +1,7 @@
 package migrations;
 
 import app.Person;
+import app.PersonBuilder;
 import app.PersonRepository;
 import com.mongodb.DBCollection;
 
@@ -21,7 +22,7 @@ public class CreateLotsOfPeople_090220142030 {
 
     public void run() {
         for (int id = 0; id < 10000; id++) {
-            Person person = new Person(String.valueOf(id), firstName(), lastName());
+            Person person = PersonBuilder.aPerson().withId(String.valueOf(id)).withFirstName(firstName()).withLastName(lastName()).build();
             repository.create(person);
         }
     }

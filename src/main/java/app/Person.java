@@ -15,8 +15,11 @@ public class Person implements Map {
     public static final String ID = "_id";
     public static final String FIRST_NAME = "firstName";
     public static final String LAST_NAME = "lastName";
+    public static final String EYE_COLOR = "eyeColor";
+    public static final String WEARS_GLASSES = "wearsGlasses";
+    public static final String DOMINANT_HAND = "dominantHand";
 
-    public Set keys = newHashSet(ID, FIRST_NAME, LAST_NAME);
+    public Set keys = newHashSet(ID, FIRST_NAME, LAST_NAME, EYE_COLOR, WEARS_GLASSES, DOMINANT_HAND);
     private Map data = newHashMap();
 
     public Person(String id, String firstName, String lastName) {
