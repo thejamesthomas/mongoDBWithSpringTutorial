@@ -8,7 +8,6 @@ To run
 mvn clean install
 mvn spring-boot:run
 
-
 Migrations
 =======
 Eager migrations can be found in the migrations package.
@@ -17,6 +16,15 @@ Test Data
 =======
 CreateLotsOfPeople populates fake people into Mongo DB with unique IDs and random combinations of first and last names.
 
+Sample JSON
+=======
+{
+  "_id":"1000000001",
+  "firstName":"Albus",
+  "lastName":"Dumbledore",
+  "wearsGlasses":true,
+  "username":"dumbledore"
+}
 
 Lunch And Learn Tasks
 =======
