@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class PersonRepository {
@@ -49,5 +50,9 @@ public class PersonRepository {
 
     private BasicDBObject queryById(String id) {
         return new BasicDBObject(ImmutableMap.of(Person.ID, id));
+    }
+
+    public void update(Map data) {
+        collection.update(queryById(String.valueOf(data.get(Person.ID))), new BasicDBObject(data));
     }
 }
