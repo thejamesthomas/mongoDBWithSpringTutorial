@@ -33,4 +33,4 @@ Lunch And Learn Tasks
 ** Ensure an index is unique (username in Person)
 ** Write an integration test for unique username
 ** Do a migration via Java (add sibling field to Person)
-** Do a lazy migration (create migration that only runs when a Person is retrieved)
+** Return a person's siblings
